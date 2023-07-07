@@ -1,6 +1,13 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+var passwordLength;
+var confirmLower;
+var confirmUpper;
+var confirmNumber;
+var confirmSpecial;
+var userChoices;
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
