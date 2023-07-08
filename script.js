@@ -54,7 +54,32 @@ function generatePassword() {
     console.log("Special Character " + confirmSpecial);
 
   };
-
+  
+    if (!confirmLower && !confirmUpper && !confirmNumber && !confirmSpecial) {
+      userChoices = alert("You must choose a criteria");
+    
+    } else if (confirmLower && confirmUpper && confirmNumber && confirmSpecial) {
+      userChoices = lowerCase.concat(upperCase, numbers, special);
+      console.log(userChoices);
+    }
+  
+    else if (confirmLower && confirmUpper && confirmNumber) {
+      userChoices = lowerCase.concat(upperCase, numbers);
+      console.log(userChoices);
+    }
+    else if (confirmLower && confirmUpper && confirmSpecial) {
+      userChoices = lowerCase.concat(upperCase, special);
+      console.log(userChoices);
+    }
+    else if (confirmLower && confirmNumber && confirmSpecial) {
+      userChoices = lowerCase.concat(numbers, special);
+      console.log(userChoices);
+    }
+    else if (confirmUpper && confirmNumber && confirmSpecial) {
+      userChoices = upperCase.concat(numbers, special);
+      console.log(userChoices);
+    }
+  
 
 
 
